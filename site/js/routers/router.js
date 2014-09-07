@@ -7,7 +7,7 @@ app.Router = Backbone.Router.extend({
   }
 });
 
-// var createUser = new app.CreateUser();
+var createUser = new app.CreateUser();
 
 var router = new app.Router();
 router.on('route:home', function() {

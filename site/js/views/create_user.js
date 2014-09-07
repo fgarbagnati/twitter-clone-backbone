@@ -2,8 +2,14 @@ var app = app || {};
 
 app.CreateUser = Backbone.View.extend({
   el: '.page',
+  template: _.template( $('#newUserTemplate').html() ),
+
+  events: {
+
+  },
+
   render: function() {
-    var template = _.template( $( '#newUserTemplate' ).html(), {});
-    this.$el.html( template );
+    this.$el.html( this.template );
+    return this;
   }
 });
