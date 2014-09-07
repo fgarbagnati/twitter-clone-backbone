@@ -13,11 +13,19 @@
       <button type="button" class="btn btn-primary">Sign in</button>
       <button type="button" class="btn btn-info">Sign up</button>
 
+      <script id="userTemplate" type="text/template">
+        <img src="" />
+        <h2><%= userName %><small><%= firstName + lastName %></small></h2>
+        <button type="button" class="btn btn-success">Follow!</button>
+      </script>
+
     </div>
 
     <script src="js/lib/jquery-1.11.1.min.js"></script>
     <script src="js/lib/underscore-min.js"></script>
     <script src="js/lib/backbone-min.js"></script>
+    <script src="js/models/user.js"></script>
+    <script src="js/views/user.js>"></script>
   </body>
 
 </html>
