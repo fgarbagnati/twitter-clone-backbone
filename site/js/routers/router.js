@@ -7,6 +7,8 @@ app.Router = Backbone.Router.extend({
   }
 });
 
+// var createUser = new app.CreateUser();
+
 var router = new app.Router();
 router.on('route:home', function() {
   console.log('in index route');
@@ -14,6 +16,7 @@ router.on('route:home', function() {
 
 router.on('route:createUser', function() {
   console.log('in user sign up');
+  createUser.render();
 });
 
 Backbone.history.start();
