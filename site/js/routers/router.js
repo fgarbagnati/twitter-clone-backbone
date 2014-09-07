@@ -3,7 +3,7 @@ var app = app || {};
 app.Router = Backbone.Router.extend({
   routes: {
     '':'home',
-    'signup':'newUser'
+    'signup':'createUser'
   }
 });
 
