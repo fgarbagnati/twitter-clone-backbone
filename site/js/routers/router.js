@@ -12,7 +12,7 @@ router.on('route:home', function() {
   console.log('in index route');
 });
 
-router.on('route:newUser', function() {
+router.on('route:createUser', function() {
   console.log('in user sign up');
 });
 
