@@ -11,13 +11,44 @@
     <div class="container">
       <h1>Twitter Clone <small>(Working Title)</small></h1>
       <button type="button" class="btn btn-primary">Sign in</button>
-      <button type="button" class="btn btn-info">Sign up</button>
+      <a href="#/signup" class="btn btn-info">Sign up</a>
+      <hr/>
+      <div class="page">
+      </div>
+
+      <script id="userTemplate" type="text/template">
+        <img src="" />
+        <h2><%= userName %><small><%= firstName + lastName %></small></h2>
+        <button type="button" class="btn btn-success">Follow!</button>
+      </script>
+
+      <script id="newUserTemplate" type="text/template">
+        <form class="new-user-form form-horizontal" role="form">
+          <legend>Sign Up</legend> <!-- // user ? 'edit' : 'new' -->
+            <input class="form-control" name="firstName" type="text" placeholder="First Name">
+            <br><br>
+            <input class="form-control" name="lastName" type="text" placeholder="Last Name">
+            <br><br>
+            <input class="form-control" name="email" type="text" placeholder="Email">
+            <br><br>
+            <input class="form-control" name="userName" type="text" placeholder="Username">
+            <br><br>
+            <input class="form-control" name="password" type="password" placeholder="Password">
+          <hr />
+          <button type="submit" class="btn btn-default">Sign Up</button>
+        </form>
+      </script>
 
     </div>
 
     <script src="js/lib/jquery-1.11.1.min.js"></script>
     <script src="js/lib/underscore-min.js"></script>
     <script src="js/lib/backbone-min.js"></script>
+
+    <script src="js/models/user.js"></script>
+    <script src="js/views/create_user.js"></script>
+    <script src="js/views/user.js"></script>
+    <script src="js/routers/router.js"></script>
   </body>
 
 </html>
