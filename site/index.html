@@ -10,7 +10,7 @@
 
     <div class="container">
       <h1>Twitter Clone <small>(Working Title)</small></h1>
-      <button type="button" class="btn btn-primary">Sign in</button>
+      <a href="#/signin" class="btn btn-primary">Sign in</a>
       <a href="#/signup" class="btn btn-info">Sign up</a>
       <hr/>
       <div class="page">
@@ -23,7 +23,7 @@
       </script>
 
       <script id="newUserTemplate" type="text/template">
-        <form class="new-user-form form-horizontal" role="form">
+        <form class="new-user-form" role="form">
           <legend>Sign Up</legend> <!-- // user ? 'edit' : 'new' -->
             <input class="form-control" name="firstName" type="text" placeholder="First Name">
             <br><br>
@@ -36,6 +36,16 @@
             <input class="form-control" name="password" type="password" placeholder="Password">
           <hr />
           <button type="submit" class="btn btn-default">Sign Up</button>
+        </form>
+      </script>
+
+      <script id="userSignInTemplate" type="text/template">
+        <form class="user-sign-in-form" role="form">
+          <legend>Sign In</legend>
+            <input name="email" type="text" placeholder="Email">
+            <input name="password" type="password" placeholder="Password">
+          <hr />
+          <button type="submit" class="btn btn-default">Sign In</button>
         </form>
       </script>
 
