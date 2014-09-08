@@ -5,6 +5,7 @@ app.User = Backbone.Model.extend({
     firstName: '',
     lastName: '',
     userName: '',
-    email: ''
+    email: '',
+    password: ''
   }
 });

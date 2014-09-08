@@ -23,19 +23,21 @@
       </script>
 
       <script id="newUserTemplate" type="text/template">
-        <form class="new-user-form" role="form">
+        <form id="newUserForm" role="form" action="#">
           <legend>Sign Up</legend> <!-- // user ? 'edit' : 'new' -->
-            <input class="form-control" name="firstName" type="text" placeholder="First Name">
+          <div>
+            <input id="firstName" type="text" placeholder="First Name" />
             <br><br>
-            <input class="form-control" name="lastName" type="text" placeholder="Last Name">
+            <input id="lastName" type="text" placeholder="Last Name" />
             <br><br>
-            <input class="form-control" name="email" type="text" placeholder="Email">
+            <input id="email" type="text" placeholder="Email"/>
             <br><br>
-            <input class="form-control" name="userName" type="text" placeholder="Username">
+            <input id="userName" type="text" placeholder="Username"/>
             <br><br>
-            <input class="form-control" name="password" type="password" placeholder="Password">
-          <hr />
-          <button type="submit" class="btn btn-default">Sign Up</button>
+            <input id="password" type="password" placeholder="Password"/>
+            <hr />
+            <button type="submit" class="btn btn-default" id="createUser">Sign Up</button>
+          </div>
         </form>
       </script>
 
@@ -56,6 +58,7 @@
     <script src="js/lib/backbone-min.js"></script>
 
     <script src="js/models/user.js"></script>
+    <script src="js/collections/users.js"></script>
     <script src="js/views/create_user.js"></script>
     <script src="js/views/create_session.js"></script>
     <script src="js/views/user.js"></script>
