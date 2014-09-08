@@ -3,11 +3,13 @@ var app = app || {};
 app.Router = Backbone.Router.extend({
   routes: {
     '':'home',
-    'signup':'createUser'
+    'signup':'createUser',
+    'signin':'createSession'
   }
 });
 
 var createUser = new app.CreateUser();
+var createSession = new app.CreateSession();
 
 var router = new app.Router();
 router.on('route:home', function() {
@@ -18,5 +20,10 @@ router.on('route:createUser', function() {
   console.log('in user sign up');
   createUser.render();
 });
+
+router.on('route:createSession', function() {
+  console.log('in user sign in');
+  createSession.render();
+})
 
 Backbone.history.start();
