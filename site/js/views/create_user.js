@@ -8,6 +8,13 @@ app.CreateUser = Backbone.View.extend({
     'click #createUser':'createUser'
   },
 
+  initialize: function() {
+    this.collection = new app.Users();
+    this.collection.fetch( {reset: true} );
+
+
+  },
+
   render: function() {
     this.$el.html( this.template );
     return this;
@@ -16,8 +23,17 @@ app.CreateUser = Backbone.View.extend({
   createUser: function( e ) {
     e.preventDefault();
 
-    console.log('default m\'fin prevented')
-    // var formData = {};
+    var formData = {};
+
+    $( '#newUserForm div' ).children( 'input' ).each( function( i, el ) {
+      if( $( el ).val() != '' ) {
+        // formData[ el.id ] = $( el ).val();
+        console.log( formData[ el.id ] + ": " + $( el ).val() )
+      }
+    });
+
+
+    console.log( formData )
 
     // $( '#createUser')
   }
