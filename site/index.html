@@ -23,7 +23,7 @@
       </script>
 
       <script id="newUserTemplate" type="text/template">
-        <form class="new-user-form" role="form">
+        <form class="new-user-form" role="form" action="#">
           <legend>Sign Up</legend> <!-- // user ? 'edit' : 'new' -->
             <input class="form-control" name="firstName" type="text" placeholder="First Name">
             <br><br>
@@ -56,6 +56,7 @@
     <script src="js/lib/backbone-min.js"></script>
 
     <script src="js/models/user.js"></script>
+    <script src="js/collections/users.js"></script>
     <script src="js/views/create_user.js"></script>
     <script src="js/views/create_session.js"></script>
     <script src="js/views/user.js"></script>
