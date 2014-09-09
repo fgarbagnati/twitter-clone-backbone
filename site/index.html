@@ -10,15 +10,20 @@
 
     <div class="container">
       <h1>Twitter Clone <small>(Working Title)</small></h1>
-      <a href="#/signin" class="btn btn-primary">Sign in</a>
-      <a href="#/signup" class="btn btn-info">Sign up</a>
+      <a href="/signin" class="btn btn-primary">Sign in</a>
+      <a href="/signup" class="btn btn-info">Sign up</a>
       <hr/>
       <div class="page">
       </div>
 
       <script id="userTemplate" type="text/template">
-        <img src="" />
-        <h2><%= userName %><small><%= firstName + lastName %></small></h2>
+        <h2>Users<small>This section is under construction</small></h2>
+        <hr />
+        <ul>
+          <li><%= userName %>: <%= firstName + lastName %></li>
+        </ul>
+        // <h2><%= userName %><small><%= firstName + lastName %></small></h2>
+        <hr />
         <button type="button" class="btn btn-success">Follow!</button>
       </script>
 
