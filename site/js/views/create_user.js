@@ -11,8 +11,6 @@ app.CreateUser = Backbone.View.extend({
   initialize: function() {
     this.collection = new app.Users();
     this.collection.fetch( {reset: true} );
-
-
   },
 
   render: function() {
@@ -27,8 +25,7 @@ app.CreateUser = Backbone.View.extend({
 
     $( '#newUserForm div' ).children( 'input' ).each( function( i, el ) {
       if( $( el ).val() != '' ) {
-        // formData[ el.id ] = $( el ).val();
-        console.log( formData[ el.id ] + ": " + $( el ).val() )
+        formData[ $( el ).attr('name') ] = $( el ).val();
       }
     });
 
