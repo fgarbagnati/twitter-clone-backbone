@@ -37,22 +37,33 @@ var UserModel = mongoose.model( 'User', User );
 //   response.send('signup is running');
 // });
 
-// create new user
-app.post( '/signup', function ( request, response ) {
-  var user = new UserModel({
-    firstName: request.body.firstName,
-    lastName: request.body.lastName,
-    userName: request.body.userName,
-    email: request.body.email,
-    password: request.body.password
-  });
+// sign up page
+// app.get( '/signup', function( request, response ) {
+//   return UserModel.find( function( err, users ) {
+//     if( !err ) {
+//       return response.send( users );
+//     } else {
+//       return console.log( err );
+//     }
+//   });
+// });
 
-  return user.save( function( err ) {
-    if( !err ) {
-      console.log( 'created' );
-      return response.send( user );
-    } else {
-      console.log( err );
-    }
-  });
-});
+// // create new user
+// app.post( '/signup', function( request, response ) {
+//   var user = new UserModel({
+//     firstName: request.body.firstName,
+//     lastName: request.body.lastName,
+//     userName: request.body.userName,
+//     email: request.body.email,
+//     password: request.body.password
+//   });
+
+//   return user.save( function( err ) {
+//     if( !err ) {
+//       console.log( 'created' );
+//       return response.send( user );
+//     } else {
+//       console.log( err );
+//     }
+//   });
+// });
