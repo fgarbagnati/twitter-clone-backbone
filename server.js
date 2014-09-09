@@ -17,3 +17,21 @@ var port = 4711;
 app.listen( port, function() {
   console.log( 'Express server listening on port %d in %s mode', port, app.settings.env );
 });
+
+// Routes
+app.get('/signup', function( request, response ) {
+  response.send('signup is running');
+});
+
+mongoose.connect( 'mongodb://localhost/twitter-clone-database' );
+
+// Schemas
+var User = new mongoose.Schema({
+  firstName: String,
+  lastName: String,
+  userName: String,
+  email: String,
+  password: String
+});
+
+var UserModel = mongoose.model( 'User', User );
