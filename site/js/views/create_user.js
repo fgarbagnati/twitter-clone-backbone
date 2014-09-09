@@ -29,9 +29,6 @@ app.CreateUser = Backbone.View.extend({
       }
     });
 
-
-    console.log( formData )
-
-    // $( '#createUser')
+    console.log( formData );
   }
 });
