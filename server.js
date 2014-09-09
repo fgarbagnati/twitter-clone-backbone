@@ -18,10 +18,6 @@ app.listen( port, function() {
   console.log( 'Express server listening on port %d in %s mode', port, app.settings.env );
 });
 
-// Routes
-app.get('/signup', function( request, response ) {
-  response.send('signup is running');
-});
 
 mongoose.connect( 'mongodb://localhost/twitter-clone-database' );
 
@@ -35,3 +31,29 @@ var User = new mongoose.Schema({
 });
 
 var UserModel = mongoose.model( 'User', User );
+
+// Routes
+
+// app.get('/signup', function( request, response ) {
+//   response.send('signup is running');
+// });
+
+// create new user
+app.post( '/signup', function ( request, response ) {
+  var user = new UserModel({
+    firstName: request.body.firstName,
+    lastName: request.body.lastName,
+    userName: request.body.userName,
+    email: request.body.email,
+    password: request.body.password
+  });
+
+  return user.save( function( err ) {
+    if( !err ) {
+      console.log( 'created' );
+      return response.send( user );
+    } else {
+      console.log( err );
+    }
+  });
+});

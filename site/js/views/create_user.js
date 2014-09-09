@@ -28,7 +28,6 @@ app.CreateUser = Backbone.View.extend({
         formData[ $( el ).attr('name') ] = $( el ).val();
       }
     });
-
-    console.log( formData );
+    this.collection.create( formData );
   }
 });
