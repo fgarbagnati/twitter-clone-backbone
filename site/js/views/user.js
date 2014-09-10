@@ -6,7 +6,6 @@ app.UserView = Backbone.View.extend({
   template: _.template( $( '#userTemplate' ).html() ),
 
   events: {
-
   },
 
   render: function() {
